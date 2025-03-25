@@ -6,9 +6,13 @@ inputs:
     description: "Nom de l'utilisateur"
     required: true
     default: "World"
+    
 runs:
-  using: "node20"
-  main: "index.js"
+  using: "composite"
+  steps:
+    - run: echo "Hello $name"
+      shell: bash
+
 branding:
-  icon: "message-square"
-  color: "red"
+  icon: "activity"
+  color: "blue"
