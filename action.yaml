@@ -1,17 +1,15 @@
-name : Hello Action
-on:
-  push:
-    branches:
-      - main
-jobs:
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install
-      - uses: <nom-utilisateur>/hello-action@v1
-        with:
-          name: Martin
+name: "Hello Action World"
+description: "Une action simple pour GitHub"
+author: "ludercej"
+inputs:
+  name:
+    description: "Nom de l'utilisateur"
+    required: true
+    default: "World"
+runs:
+  using: "node20"
+  main: "index.js"
+
+branding:
+  icon: "message-square"
+  color: "blue"
