@@ -1,15 +1,18 @@
 name: "Hello Action World"
 description: "Une action simple pour GitHub"
-author: "ludercej"
+author: "Jensone"
 inputs:
   name:
     description: "Nom de l'utilisateur"
     required: true
     default: "World"
+    
 runs:
-  using: "node20"
-  main: "index.js"
-  
+  using: "composite"
+  steps:
+    - run: echo "Hello $name"
+      shell: bash
+
 branding:
-  icon: "message-square"
+  icon: "activity"
   color: "blue"
