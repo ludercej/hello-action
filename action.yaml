@@ -11,4 +11,4 @@ runs:
   main: "index.js"
 branding:
   icon: "message-square"
-  color: "blue"
+  color: "red"
